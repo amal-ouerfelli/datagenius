@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #af9a7d;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
+body {
+  padding-top: 66px;
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+/* end of globals */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background: var(--offWhite);
+  z-index: 1;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 0;
+  color: var(--mainBlack);
+  transition: var(--mainTransition);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+}
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.show-nav {
+  height: 100px;
+}
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+/* end of navbar */
+/* produit */
+.produit {
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+}
+.produit:hover {
+  box-shadow: var(--darkShadow);
+}
+
+.img-container {
+  position: relative;
+}
+.img-container img {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+.price-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--mainWhite);
+  padding: 0.3rem 0.6rem 0.5rem;
+  border-bottom-right-radius: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  transition: var(--mainTransition);
+}
+.price-top h2 {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: var(--mainSpacing);
+}
+
+.img-container:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.img-container:hover img {
+  opacity: 0.3;
+}
+.img-container:hover .price-top {
+  opacity: 0;
+}
+.img-container:hover .room-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.produit-info {
+  background: var(--darkGrey);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+}
+/* end of produit  */
+
+/* produitlist */
+.produitslist {
+  padding: 5rem 0;
+}
+.produitslist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+@media screen and (min-width: 776px) {
+  .produitslist-center {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .produitslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+/* end of produitlist */
