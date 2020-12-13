@@ -14,4 +14,4 @@ Description des fonctions Django:
 * la fonction mon_panier() permet d'afficher les détails du panier du client.
 * la fonction Somme() permet de calculer la somme des produits achetés.
 
-![alt text](https://github.com/amal-ouerfelli/datagenius/blob/main/diagramme_UML_.png?raw=true)
+![alt text](https://github.com/amal-ouerfelli/datagenius/blob/main/diagramme_UML_.PNG?raw=true)
