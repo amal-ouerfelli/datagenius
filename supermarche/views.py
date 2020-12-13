@@ -38,7 +38,7 @@ class MonPanierApi(generics.CreateAPIView):
     serializer_class = MinPanierSerializer #serialisation des données
     
 
-
+# Produit_client
 @api_view(['GET','POST'])
 def produit_client(request):
     if (request.method=="GET"):
